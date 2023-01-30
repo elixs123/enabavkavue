@@ -1,20 +1,28 @@
 <template>
-    <div>
-        <main class="mt-3">
-            <router-view></router-view>
-        </main>
-    </div>
+        <router-view></router-view>
+        <button @click="increment()">CLICK</button>
 </template>
 <script>
 import {mapActions} from 'vuex'
+import { mapState } from "vuex";
 export default {
     name:"default-layout",
+    computed: {
+    ...mapState(["authStore"]),
+  },
     data(){
         return {
-           // user:this.$store.state.auth.user
+
         }
     },
+    mounted(){
+        console.log(this.$store.state.authStore)
+    },
     methods:{
+        increment() {
+            this.$store.commit('authStore')
+            console.log(this.$store.state.count)
+        },
         ...mapActions({
             signOut:"auth/logout"
         }),

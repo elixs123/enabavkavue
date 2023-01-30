@@ -1,5 +1,4 @@
 import { createWebHistory, createRouter } from 'vue-router'
-import store from '@/store'
 /* Guest Component */
 const Login = () => import('@/components/Login.vue')
 const Register = () => import('@/components/Register.vue')
