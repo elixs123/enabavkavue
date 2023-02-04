@@ -1,26 +1,11 @@
 import { createWebHistory, createRouter } from 'vue-router'
-/* Guest Component */
-const Login = () => import('@/components/Login.vue')
-const Register = () => import('@/components/Register.vue')
-/* Guest Component */
-/* Layouts */
+
 const DahboardLayout = () => import('@/components/layouts/Default.vue')
 /* Layouts */
 /* Authenticated Component */
 const Dashboard = () => import('@/components/Dashboard.vue')
 /* Authenticated Component */
 const routes = [
-    {
-        name: "login",
-        path: "/login",
-        component: Login,
-        props: true
-    },
-    {
-        name: "register",
-        path: "/register",
-        component: Register
-    },
     {
         path: "/",
         component: DahboardLayout,

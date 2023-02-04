@@ -1,6 +1,7 @@
 <template>
+     <button @click="increment()">TESTIRANJE</button>
         <router-view></router-view>
-        <button @click="increment()">CLICK</button>
+
 </template>
 <script>
 import {mapActions} from 'vuex'

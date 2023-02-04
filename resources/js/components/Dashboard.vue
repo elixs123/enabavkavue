@@ -331,7 +331,7 @@
 export default {
     props: ['name'],
     name:"dashboard",
-    onMounted(){
+    mounted(){
         console.log('doslo')
     },
     data(){
